@@ -1,7 +1,10 @@
 <h1><%=@student.to_s%></h1>
-
 <br><br>
 <%=link_to 'Edit Student', edit_student_path(@student)%>
+<br><br>
+<%=form_tag student_path(@student), method:'delete' do %>
+    <%=submit_tag 'Delete Student'%>
+<%end%>
 <br><br>
 <%=link_to 'Students List', students_path%>
 

@@ -27,6 +27,12 @@ def update
     redirect_to student_path(@student)
 end 
 
+def destroy
+    set_student
+    @student.destroy 
+    redirect_to students_path 
+end
+
 private
 
 def set_student
