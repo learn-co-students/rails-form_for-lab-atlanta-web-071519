@@ -1,0 +1,9 @@
+<h1>Edit School Class</h1>
+<br><br>
+<%=form_for @school_class, url: school_class_path(@school_class), html: {method: "patch"} do |f|%>
+    <%=f.text_field :title%>
+    <%=f.text_field :room_number%>
+    <%=f.submit%>
+<%end%>
+<br><br>
+<%=link_to 'School Class List', school_classes_path%>

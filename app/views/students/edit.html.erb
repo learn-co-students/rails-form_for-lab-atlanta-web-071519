@@ -1,0 +1,9 @@
+<h1>Edit Student</h1>
+<br><br>
+<%=form_for @student, url: student_path(@student), html: {method: "patch"} do |f|%>
+    <%=f.text_field :first_name%>
+    <%=f.text_field :last_name%>
+    <%=f.submit%>
+<%end%>
+<br><br>
+<%=link_to 'Students List', students_path%>
